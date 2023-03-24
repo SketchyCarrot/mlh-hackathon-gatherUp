@@ -10,10 +10,6 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    flex-direction: column;
 }
 
-/* temp */
-div {
-    font-size: 2rem;
-    color: var(--color-primary-theme);
-}

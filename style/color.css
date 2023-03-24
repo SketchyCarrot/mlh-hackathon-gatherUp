@@ -1,8 +1,9 @@
 :root{
     --color-primary:#212121; 
     --color-secondary:#121212;
+    --link-color:tomato;
     --color-primary-theme:aqua;
     --color-secondary-theme:indigo;
     --text-primary:#dedede;
-    
+
 }
