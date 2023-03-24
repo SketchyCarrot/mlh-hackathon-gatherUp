@@ -1,0 +1,19 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    color: var(--text-primary);
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* temp */
+div {
+    font-size: 2rem;
+    color: var(--color-primary-theme);
+}
