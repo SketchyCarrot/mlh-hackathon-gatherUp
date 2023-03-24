@@ -1,0 +1,15 @@
+.skribble-word {
+    color: var(--color-primary-theme);
+    border: 2px solid var(--color-primary-theme);
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 25px;
+    transition: 0.3s linear all;
+}
+
+.skribble-word:hover {
+    border-color: var(--color-primary-theme);
+    background: var(--color-primary-theme);
+    color: var(--text-primary);
+    box-shadow: 0px 0px 10px var(--color-primary-theme);
+}

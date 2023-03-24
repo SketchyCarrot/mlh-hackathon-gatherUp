@@ -1,0 +1,27 @@
+* {
+    box-sizing: content-box;
+}
+
+
+body {
+    margin: 0;
+    color: var(--text-primary);
+    background: var(--color-primary);
+    min-height: 100vh;
+}
+
+#game,
+.flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#game {
+    height: 100vh;
+}
+
+.game-title {
+    margin: 25px auto;
+}

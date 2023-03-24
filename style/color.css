@@ -1,9 +1,9 @@
 :root{
     --color-primary:#212121; 
     --color-secondary:#121212;
-    --link-color:tomato;
-    --color-primary-theme:aqua;
-    --color-secondary-theme:indigo;
+    --link-color:#ff2b55;
+    --color-primary-theme:#fa8072;
+    --color-secondary-theme:#ff69b4;
     --text-primary:#dedede;
 
 }
