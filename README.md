@@ -49,6 +49,5 @@ We learned a lot participating in this hackathon. We were awed by the support we
 
 
 # Credits (3rd party stuff used)
-- [Wordlist](https://gist.github.com/mvark/9e0682c62d75625441f6ded366245203) for skribble
-- [Riddles](https://github.com/nkilm/riddles-api/blob/main/data/riddles.json)
-- [Truth or dare](https://raw.githubusercontent.com/sylhare/Truth-or-Dare/master/src/output.json)
+- [Word list](https://gist.github.com/mvark/9e0682c62d75625441f6ded366245203) for skribble
+- [Riddles list](https://github.com/nkilm/riddles-api/blob/main/data/riddles.json)
