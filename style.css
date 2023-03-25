@@ -6,6 +6,7 @@
 
 body{
     font-family: monserrat;
+    background-color: #525252;
 }
 
 a, a:hover{
@@ -86,4 +87,28 @@ nav a:hover{
         top: 15px;
         right: 10px;
     }
+}
+
+.icon{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.icon button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #FFFFFF;
+    background-color: #EC625F;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.icon button:hover{
+    background-color: #313131;
 }
