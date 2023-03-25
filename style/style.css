@@ -30,7 +30,7 @@ nav {
     top: 0px;
     left: 0px;
     width: 100%;
-    height:56px;
+    height: 56px;
     z-index: 100;
 }
 
@@ -80,15 +80,29 @@ nav a:hover {
     display: none;
 }
 
+.side-bar {
+    display: none;
+    transition: 0.3s linear all;
+}
+
+.menu.open{
+    display: block !important;
+}
+nav[class=closed] .side-bar{
+    transform: rotate(45deg);
+}
 @media screen and (max-width: 600px) {
-    nav {
-        display: block;
-        position: 15px 20px;
+    .side-bar {
+        display: inline-block;
     }
 
     .menu {
-        margin: top;
         display: none;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transform: translateY(100%);
+        background: var(--color-primary);
     }
 
     .menu.active,
@@ -103,33 +117,40 @@ nav a:hover {
     }
 }
 
+
+.logo {
+    margin: auto;
+}
+
 .icon {
     background: var(--color-secondary);
     background-position: center center;
-    background-size:contain;
-    min-width:250px;
-    min-height:250px;
+    background-size: contain;
+    min-width: 250px;
+    min-height: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
-    margin-top:40px;
+    margin-top: 40px;
     text-align: center;
     font-family: arial;
     display: flex;
     flex-direction: column;
-    border-radius:20px;
-    margin-right:35px;
+    border-radius: 20px;
+    /* margin-right:35px; */
 }
-.title{
+
+.title {
     display: inline-block;
-    padding:15px;
-    padding-bottom:50px;
-    margin:0px;
-    width:100%;
-    background: rgba(0,0,0,0.1);
+    padding: 15px;
+    padding-bottom: 50px;
+    margin: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
-    clip-path: polygon(0% 0%,100% 0% , 100% calc(100% - 40px) , 50% calc(100% - 40px) , 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 40px), 50% calc(100% - 40px), 0% 100%);
 }
+
 .icon .button {
     margin: 0px;
     margin-top: auto;
@@ -142,11 +163,12 @@ nav a:hover {
 }
 
 .icon img {
-    width:50%;
-    margin:auto;
+    width: 50%;
+    margin: auto;
 }
-.icon title{
-    margin:auto !important;
+
+.icon title {
+    margin: auto !important;
 }
 
 .icon button:hover {
@@ -157,4 +179,5 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 40px;
 }
