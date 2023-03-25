@@ -4,7 +4,8 @@ a {
     margin: 5px 10px;
 }
 
-button {
+button,
+.button {
     border: none;
     color: var(--text-primary);
     background: linear-gradient(to top right, var(--color-primary-theme), var(--color-secondary-theme));

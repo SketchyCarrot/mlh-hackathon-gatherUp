@@ -104,6 +104,8 @@ nav a:hover {
 
 .icon {
     background: var(--color-secondary);
+    background-position: center center;
+    background-size:contain;
     min-width:250px;
     min-height:250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -115,9 +117,19 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     border-radius:20px;
+    margin-right:35px;
 }
-
-.icon button {
+.title{
+    display: inline-block;
+    padding:15px;
+    padding-bottom:50px;
+    margin:0px;
+    width:100%;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+    clip-path: polygon(0% 0%,100% 0% , 100% calc(100% - 40px) , 50% calc(100% - 40px) , 0% 100%);
+}
+.icon .button {
     margin: 0px;
     margin-top: auto;
     padding: 12px;
@@ -128,6 +140,10 @@ nav a:hover {
     border-radius: 0px 0px 20px 20px;
 }
 
+.icon img {
+    width:50%;
+    margin:auto;
+}
 .icon title{
     margin:auto !important;
 }
