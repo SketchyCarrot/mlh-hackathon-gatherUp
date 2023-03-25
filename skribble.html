@@ -62,7 +62,7 @@
     <script src="./script/utils.js"></script>
     <script>
         onload = main;
-
+        onclick = fullscreen;
         function main() {
             fetch(CONFIG.server_path + "/getScribbleWord")
                 .then(res => res.json())
@@ -98,6 +98,9 @@
             targ.classList.add("glow");
         }
 
+        function fullscreen() {
+            document.body.requestFullscreen();
+        }
     </script>
 </body>
 
