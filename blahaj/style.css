@@ -1,0 +1,62 @@
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #34495e;
+    --color-accent: #f39c12;
+    --text-color: #ecf0f1;
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-primary);
+    color: var(--text-color);
+    font-family: var(--font-family);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  button {
+    background-color: var(--color-accent);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e67e22;
+  }
+  
+  input[type="text"], select {
+    background-color: var(--color-secondary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  input[type="text"]::placeholder, select {
+    color: #bdc3c7;
+  }
+  
+  input[type="text"]:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--color-accent);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+  }
+  
