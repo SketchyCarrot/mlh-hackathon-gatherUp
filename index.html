@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GameApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+	  <a href="#home"><img src="logo.png" alt="home-button"></a>
+  </div>
+  <div class="side-bar">
+    <a href="#side-menu">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+    </a>
+  </div>
+  <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#repo">Repo Link</a></li>
+  </ul>
+</nav>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>
+
+  $(function(){
+    $("side-bar").on("click", function(){
+      if($(".menu").hasClass("active")){
+        $(".menu").removeClass("active");
+        $(this).find("a").html("<div class="side-bar"></div>");
+      } else{
+        $(".menu").addClass("active");
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>
