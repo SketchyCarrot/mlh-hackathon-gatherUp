@@ -4,7 +4,7 @@ Edit configurations in [script/config.js](script/config.js)
 
 
 
-#INSPIRATION 💡✨
+# INSPIRATION 💡✨
 
 We have encountered several instances where we dozed off at parties because of the boredom. The lack of entertainment and interaction is the root cause of it. We wanted to find a way to help keep the organizers worry-free about the entertainment of their guests. So we decided to create an app to add some fun to those boring times.
 
