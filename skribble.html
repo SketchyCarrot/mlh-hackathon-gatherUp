@@ -9,19 +9,96 @@
     <link rel="stylesheet" href="./style/color.css">
     <link rel="stylesheet" href="./style/stylizer.css">
     <link rel="stylesheet" href="./style/game_screen.css">
-    <link rel="stylesheet" href="./style/skribble.css">
+    <style>
+        * {
+            user-select: none;
+        }
+
+        .skribble-word {
+            color: var(--color-primary-theme);
+            border: 2px solid var(--color-primary-theme);
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin: 25px;
+            transition: 0.3s linear all;
+        }
+
+        .glow,
+        .skribble-word:hover {
+            border-color: var(--color-primary-theme);
+            background: var(--color-primary-theme);
+            color: var(--text-primary);
+            box-shadow: 0px 0px 10px var(--color-primary-theme);
+        }
+
+        .active {
+            display: block;
+            transform: scale(3);
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <div id="game">
         <h1 class="game-title">Skribble</h1>
-
-        <div class="flex">
-            <div class="skribble-word">word 1</div>
-            <div class="skribble-word">word 2</div>
-            <div class="skribble-word">word 3</div>
+        <div class="flex skribble-word-container">
         </div>
+        <button style="margin-bottom:25px" class="h-flex">
+            <span style="margin-right: 5px;" onclick="main()"> New Word </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                <path
+                    d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+            </svg>
+        </button>
     </div>
+
+    <script src="./script/config.js"></script>
+    <script src="./script/utils.js"></script>
+    <script>
+        onload = main;
+
+        function main() {
+            fetch(CONFIG.server_path + "/getScribbleWord")
+                .then(res => res.json())
+                .then(json => handle_res(json));
+        }
+
+        function handle_res(json_res) {
+            let container = $(".skribble-word-container");
+            container.innerHTML = "";
+            json_res.forEach(word => {
+                let el = document.createElement("div");
+                el.classList.add("skribble-word");
+                el.innerText = word;
+                container.appendChild(el);
+                el.addEventListener("click", displayEl);
+            });
+        }
+
+        function displayEl(evt) {
+
+            evt.preventDefault();
+            let targ = evt.target;
+
+
+            let container = $(".skribble-word-container");
+            let children = container.children;
+            for (let i = 0; i < children.length; i++) {
+                children[i].classList.add("hide");
+            }
+
+            targ.classList.remove("hide");
+            targ.classList.add("active");
+            targ.classList.add("glow");
+        }
+
+    </script>
 </body>
 
 </html>

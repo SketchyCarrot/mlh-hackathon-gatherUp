@@ -25,3 +25,17 @@ input {
     outline: none;
     margin: 10px 10px;
 }
+
+
+.h-flex,
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
