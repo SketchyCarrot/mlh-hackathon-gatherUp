@@ -1,5 +1,5 @@
 const CONFIG={
-    "server_path" : "http://localhost:8080",
+    "server_path" : "https://GatherUp-Server.prashanthkumar0.repl.co",
 };
 
 Object.freeze(CONFIG);
