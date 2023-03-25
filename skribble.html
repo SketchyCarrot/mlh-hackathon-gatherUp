@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600&display=swap" rel="stylesheet">
     <title>GatherUp | Skribble</title>
     <link rel="stylesheet" href="./style/color.css">
     <link rel="stylesheet" href="./style/stylizer.css">
@@ -12,6 +13,10 @@
     <style>
         * {
             user-select: none;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
         }
 
         .skribble-word {
@@ -44,7 +49,7 @@
 
 <body>
     <div id="game">
-        <h1 class="game-title">Skribble</h1>
+        <h1 class="title">Skribble</h1>
         <div class="flex skribble-word-container">
         </div>
         <button style="margin-bottom:25px" class="h-flex" onclick="main()">

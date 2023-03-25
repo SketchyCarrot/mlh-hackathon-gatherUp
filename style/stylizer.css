@@ -40,3 +40,37 @@ input {
     display: flex;
     flex-direction: column;
 }
+
+
+.title {
+    margin: 25px auto;
+    position: relative;
+}
+
+.title:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+    transform-origin: 50% 50%;
+    background: linear-gradient(to top right, var(--color-primary-theme), var(--color-secondary-theme));
+    box-shadow: 0px 0px 10px var(--color-primary-theme);
+}
+
+.title:after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to top right, var(--color-primary-theme), var(--color-secondary-theme));
+
+}
