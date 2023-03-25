@@ -1,4 +1,7 @@
 # mlh-hackathon-gatherUp
 
-> First time hackers :) 
-![comming soon](https://images.squarespace-cdn.com/content/v1/58c799ccd2b8576b507be083/b6809367-1fe6-45db-a4b0-3c536db76642/coming-soon-gif-13.gif?format=1000w)
+Edit configurations in [script/config.js](script/config.js)
+
+# Credits
+- [Wordlist](https://gist.github.com/mvark/9e0682c62d75625441f6ded366245203) for skribble
+- [Riddles](https://github.com/nkilm/riddles-api/blob/main/data/riddles.json)
