@@ -4,8 +4,9 @@ header("Access-Control-Allow-Origin: *");
 $route = $_SERVER["REQUEST_URI"];
 
 switch ($route) {
-    case "/":
-
+    case "/getRiddle":
+        $res = getRiddle();
+        echo json_encode($res);
         break;
     case "/getScribbleWord":
         $res = getScribbleWord();
@@ -16,7 +17,7 @@ switch ($route) {
 
 function getScribbleWord()
 {
-    $fileName = "../assets/Skribble-wordlist.json";
+    $fileName = "assets/Skribble-wordlist.json";
     $wl = json_decode(file_get_contents($fileName));
     $wl_size = count($wl);
     $words = [];
@@ -25,4 +26,11 @@ function getScribbleWord()
         array_push($words, $word);
     }
     return $words;
+}
+
+function getRiddle()
+{
+    $fileName = "assets/riddles.json";
+    $riddles = json_decode(file_get_contents($fileName));
+    return $riddles[rand(0, count($riddles) - 1)];
 }
