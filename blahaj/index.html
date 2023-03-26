@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Find Blahlaj 🦈 </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Find Blahlaj 🦈 | GatherUp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/color.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/stylizer.css">
   </head>
   <body>
     <h1>Find Blahlaj 🦈 </h1>
-    <p>Enter the names of players:</p>
+    <label for="participants">Enter the names of the participants:</label>
+        <input type="text" id="participants" name="participants" placeholder="e.g. Isha, Prashanth, Mihir" />
+    
     <div id="players"></div>
     <button onclick="assignBlahlaj()">Assign Blahlaj</button>
     <p id="guess"></p>
