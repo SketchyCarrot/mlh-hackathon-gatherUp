@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pass the Parcel</title>
+    <title>Pass the Parcel Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Pass the Parcel</h1>
-      <div class="input-group">
-        <label for="participants">Enter Participants:</label>
-        <input type="text" id="participants" />
+      <h1>Pass the Parcel Game</h1>
+      <div class="form">
+        <label for="participants">Enter the names of the participants:</label>
+        <input type="text" id="participants" name="participants" placeholder="e.g. Isha, Prashanth, Mihir" />
+        <button id="start">Start Game</button>
+        <button id="stop" disabled>Stop Game</button>
       </div>
-      <button id="start">Start</button>
-      <div id="parcel"></div>
-      <div id="prompt" class="hidden"></div>
+      <div id="game-container">
+        <div id="parcel"></div>
+        <div id="prompt" class="hidden"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
